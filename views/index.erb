@@ -1,0 +1,16 @@
+<h1>bookmakr</h1>
+
+<div id="new-link">
+  <form action="/links" method="post" class="well form-inline">
+    url <input type="text" name="url">
+    title <input type="text" name="title">
+    tags <input type="text" name="tags">
+    <input type="submit" value="Add link" class="btn btn-primary">
+  </form>
+</div>
+
+<ul class="list-unstyled">
+  <% @links.each do |link| %>
+    <li><a href="<%= link.url %>"><%= link.title %></a></li>
+  <% end %>
+</ul>
